@@ -1,10 +1,10 @@
 ﻿namespace Kingdom.Contracts.Weapons
 {
-    public class SwordBehaviour : IWeaponBehaviour
+    public class PaperClipBehaviour : IWeaponBehaviour
     {
         public string UseWeapon()
         {
-            return "Slash!";
+            return "Papercut!";
         }
     }
 }

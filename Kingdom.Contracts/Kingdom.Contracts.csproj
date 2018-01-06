@@ -37,11 +37,20 @@
     <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Character.cs" />
+    <Compile Include="Weapons\Classes\BowAndArrowBehaviour.cs" />
+    <Compile Include="Units\Classes\Knight.cs" />
+    <Compile Include="Weapons\Classes\PaperClipBehaviour.cs" />
+    <Compile Include="Units\Classes\Smurfette.cs" />
+    <Compile Include="Units\Classes\SmurfStorm.cs" />
+    <Compile Include="Units\Classes\Troll.cs" />
+    <Compile Include="Units\Interfaces\Character.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Units\Classes\Queen.cs" />
     <Compile Include="Weapons\Classes\AxeBehaviour.cs" />
+    <Compile Include="Weapons\Classes\KnifeBehaviour.cs" />
+    <Compile Include="Weapons\Classes\SwordBehaviour.cs" />
     <Compile Include="Weapons\Interfaces\IWeaponBehaviour.cs" />
-    <Compile Include="Units\King.cs" />
+    <Compile Include="Units\Classes\King.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

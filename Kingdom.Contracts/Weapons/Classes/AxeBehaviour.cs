@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace Kingdom.Contracts.Weapons
+﻿namespace Kingdom.Contracts.Weapons
 {
     public class AxeBehaviour : IWeaponBehaviour
     {
-        public void UseWeapon()
+        public string UseWeapon()
         {
-            Console.WriteLine("Chop!");
+            return "Chop!";
         }
     }
 }

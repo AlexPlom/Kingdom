@@ -4,8 +4,6 @@ namespace Kingdom.Contracts.Units
 {
     public class SmurfStorm : Character
     {
-        protected SmurfStorm(IWeaponBehaviour weaponBehaviour) : base(weaponBehaviour)
-        {
-        }
+        public SmurfStorm(IWeaponBehaviour weaponBehaviour) : base(weaponBehaviour) { }
     }
 }

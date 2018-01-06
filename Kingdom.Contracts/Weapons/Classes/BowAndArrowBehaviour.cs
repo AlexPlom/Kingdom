@@ -2,11 +2,11 @@
 
 namespace Kingdom.Contracts.Weapons
 {
-    public class KnifeBehaviour : IWeaponBehaviour
+    public class BowAndArrowBehaviour : IWeaponBehaviour
     {
         public string UseWeapon()
         {
-            return "Shank!";
+            return "Headshot!";
         }
     }
 }

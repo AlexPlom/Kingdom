@@ -4,6 +4,6 @@ namespace Kingdom.Contracts.Units
 {
     public class Queen : Character
     {
-        protected Queen(IWeaponBehaviour weaponBehaviour) : base(weaponBehaviour) { }
+        public Queen(IWeaponBehaviour weaponBehaviour) : base(weaponBehaviour) { }
     }
 }

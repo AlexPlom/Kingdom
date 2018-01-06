@@ -2,6 +2,6 @@
 {
     public interface IWeaponBehaviour
     {
-        void UseWeapon();
+        string UseWeapon();
     }
 }
