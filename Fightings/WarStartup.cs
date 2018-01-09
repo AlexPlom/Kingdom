@@ -2,6 +2,7 @@
 using Kingdom.Contracts.Units;
 using Kingdom.Contracts.Weapons;
 using System;
+using System.Collections.Generic;
 
 namespace Fightings
 {
@@ -9,23 +10,33 @@ namespace Fightings
     {
         static void Main(string[] args)
         {
-            Character[] units = GenerateTroops();
+            Dictionary<string, IWeaponBehaviour> characterInformation = new Dictionary<string, IWeaponBehaviour>
+            {
+                { "King", new SwordBehaviour() },
+                { "Knight", new BowAndArrowBehaviour() },
+                { "Queen", new AxeBehaviour() },
+                { "Troll", new PaperClipBehaviour() },
+                { "GrandWizard", new KnifeBehaviour() }
+            };
+
+            IEnumerable<Character> units = GenerateTroops(characterInformation);
             DeployTheAttack(units);
         }
 
-        private static Character[] GenerateTroops()
+        private static IEnumerable<Character> GenerateTroops(Dictionary<string, IWeaponBehaviour> characterInformation)
         {
-            return new Character[5]
+            var factory = new CharacterFactory();
+            List<Character> characters = new List<Character>();
+
+            foreach (var information in characterInformation)
             {
-                new King(new SwordBehaviour()),
-                new Queen(new BowAndArrowBehaviour()),
-                new Knight(new AxeBehaviour()),
-                new Troll(new PaperClipBehaviour()),
-                new Smurfette(new KnifeBehaviour())
-            };
+                characters.Add(factory.CreateInstance(information.Key, information.Value));
+            }
+
+            return characters;
         }
 
-        private static void DeployTheAttack(Character[] units)
+        private static void DeployTheAttack(IEnumerable<Character> units)
         {
             foreach (var unit in units)
             {
