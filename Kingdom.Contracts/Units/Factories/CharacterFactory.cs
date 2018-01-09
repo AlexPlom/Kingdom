@@ -34,9 +34,10 @@ namespace Kingdom.Contracts.Units
         {
             if (string.IsNullOrEmpty(characterName)) throw new ArgumentNullException(nameof(characterName));
 
+
             foreach (var character in characters)
             {
-                if (character.Key.Contains(characterName))
+                if (character.Key.Contains(characterName.ToLower()))
                 {
                     return characters[character.Key];
                 }
