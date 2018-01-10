@@ -39,6 +39,7 @@
   <ItemGroup>
     <Compile Include="Units\Factories\CharacterFactory.cs" />
     <Compile Include="Units\Classes\UnknownCharacter.cs" />
+    <Compile Include="Units\ICharacterFactory.cs" />
     <Compile Include="Weapons\Classes\BowAndArrowBehaviour.cs" />
     <Compile Include="Units\Classes\Knight.cs" />
     <Compile Include="Weapons\Classes\PaperClipBehaviour.cs" />
@@ -46,7 +47,6 @@
     <Compile Include="Units\Classes\SmurfStorm.cs" />
     <Compile Include="Units\Classes\Troll.cs" />
     <Compile Include="Units\Interfaces\Character.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Units\Classes\Queen.cs" />
     <Compile Include="Weapons\Classes\AxeBehaviour.cs" />
     <Compile Include="Weapons\Classes\KnifeBehaviour.cs" />
@@ -55,6 +55,8 @@
     <Compile Include="Weapons\Interfaces\IWeaponBehaviour.cs" />
     <Compile Include="Units\Classes\King.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
