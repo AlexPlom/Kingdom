@@ -39,7 +39,7 @@
   <ItemGroup>
     <Compile Include="Units\Factories\CharacterFactory.cs" />
     <Compile Include="Units\Classes\UnknownCharacter.cs" />
-    <Compile Include="Units\ICharacterFactory.cs" />
+    <Compile Include="Units\Interfaces\ICharacterFactory.cs" />
     <Compile Include="Weapons\Classes\BowAndArrowBehaviour.cs" />
     <Compile Include="Units\Classes\Knight.cs" />
     <Compile Include="Weapons\Classes\PaperClipBehaviour.cs" />
