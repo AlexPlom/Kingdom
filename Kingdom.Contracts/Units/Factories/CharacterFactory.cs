@@ -8,7 +8,7 @@ using Kingdom.Contracts.Weapons.Classes;
 
 namespace Kingdom.Contracts.Units
 {
-    public class CharacterFactory
+    public class CharacterFactory : ICharacterFactory
     {
         private Dictionary<string, Type> characters;
 
